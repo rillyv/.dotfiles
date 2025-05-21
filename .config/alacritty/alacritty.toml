@@ -1,0 +1,26 @@
+# ~/.config/alacritty/alacritty.toml
+# Minimal and essential Alacritty config with Rose-Pine theme
+
+[window]
+opacity = 0.8              # Semi-transparent background
+padding.x = 10             # Horizontal padding
+padding.y = 10             # Vertical padding
+decorations = "full"       # Full window decorations
+startup_mode = "Maximized" # Start Alacritty maximized
+
+[font]
+size = 15.0
+normal.family = "JetBrainsMono Nerd Font"
+
+[colors.primary]
+background = "#191724"  # Rose-Pine background (dark)
+foreground = "#e0def4"  # Light text
+
+[cursor]
+style.shape = "Block"
+style.blinking = "On"
+
+[scrolling]
+history = 5000  # Number of lines in scrollback
+multiplier = 3  # Scroll speed
+
