@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -109,16 +110,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zsh_profile
+# source ~/.zsh_profile
 
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
 alias vim="nvim"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/anthonymamaril/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+export PATH="$HOME/.local/bin:$PATH"

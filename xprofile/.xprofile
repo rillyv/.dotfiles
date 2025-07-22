@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get the correct Logitech G Pro mouse ID
+MOUSE_ID=$(xinput list | grep -i 'Logitech G Pro' | grep pointer | awk '{print $6}' | cut -d'=' -f2)
+
+# Apply settings if mouse is found
+if [ -n "$MOUSE_ID" ]; then
+    xinput set-prop "$MOUSE_ID" "libinput Accel Profile Enabled" 0, 1
+    xinput set-prop "$MOUSE_ID" "libinput Natural Scrolling Enabled" 1
+    xinput set-prop "$MOUSE_ID" "libinput Accel Speed" 0
+fi
+

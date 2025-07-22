@@ -10,7 +10,7 @@ startup_mode = "Maximized" # Start Alacritty maximized
 
 [font]
 size = 15.0
-normal.family = "JetBrainsMono Nerd Font"
+# normal.family = "JetBrainsMono Nerd Font"
 
 [colors.primary]
 background = "#191724"  # Rose-Pine background (dark)
