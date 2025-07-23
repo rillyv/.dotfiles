@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 export DOTFILES="$HOME/.dotfiles"
-export STOW_FOLDERS="zsh,tmux,nvim,alacritty,xprofile,i3"
+export STOW_FOLDERS="zsh,tmux,nvim,alacritty,xprofile,i3,personal"
 
 pushd $DOTFILES
 
