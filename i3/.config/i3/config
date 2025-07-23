@@ -163,8 +163,10 @@ bar {
 }
 
 # ------------------------------------------
-# CUSTOM KEYS START
+# CUSTOM
 # ------------------------------------------
+bindsym $mod+p exec flameshot gui
+
 exec --no-startup-id nm-applet
 exec --no-startup-id bash -c "source ~/.xprofile"
 
