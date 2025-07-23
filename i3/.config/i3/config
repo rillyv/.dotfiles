@@ -12,6 +12,7 @@
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
+
 # is used in the bar {} block below.
 font pango:monospace 15px
 
@@ -167,13 +168,6 @@ bar {
 exec --no-startup-id nm-applet
 exec --no-startup-id bash -c "source ~/.xprofile"
 
-bindsym $mod+Shift+s exec --no-startup-id ~/dotfiles/bin/monitor
-bindsym $mod+Shift+n exec --no-startup-id ~/dotfiles/bin/resolution
-
-# FKeys
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-
+exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/zen'
+exec --no-startup-id i3-msg 'workspace 4; exec flatpak run com.spotify.Client'

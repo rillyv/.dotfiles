@@ -75,8 +75,8 @@ plugins=(
   aws
   docker
   terraform
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+#  zsh-autosuggestions
+#  zsh-syntax-highlighting
   1password
 )
 

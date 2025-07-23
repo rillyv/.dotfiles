@@ -55,9 +55,9 @@ return {
 				"lemminx",
 				"yamlls",
 				"bashls",
-				"gopls",
+				--"gopls",
 				"graphql",
-				"sqls",
+				--"sqls",
 			},
 			handlers = {
 				function(server_name)
