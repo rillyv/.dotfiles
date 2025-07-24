@@ -9,7 +9,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 export DOTFILES=~/.dotfiles
-export STOW_FOLDERS="zsh,tmux,nvim,alacritty,xprofile,i3,work,bin,shell"
+export STOW_FOLDERS="zsh,tmux,nvim,alacritty,xprofile,i3,personal,work,bin,shell"
 
 addToPathFront $HOME/.local/scripts
 
