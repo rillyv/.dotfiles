@@ -1,4 +1,5 @@
 export XDG_CONFIG_HOME=~/.config
+export GIT_EDITOR=nvim
 
 PERSONAL=$XDG_CONFIG_HOME/personal
 source $PERSONAL/env

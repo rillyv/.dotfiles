@@ -17,8 +17,4 @@ commitDotFiles() {
     git commit -m "personal update"
     git push origin main
     popd
-    git add .
-    git commit -m "dotfiles update"
-    git push origin main
-    popd
 }
