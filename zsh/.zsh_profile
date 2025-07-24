@@ -1,4 +1,14 @@
+export XDG_CONFIG_HOME=~/.config
+
+PERSONAL=$XDG_CONFIG_HOME/personal
+source $PERSONAL/env
+
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
+export DOTFILES=~/.dotfiles
+
+addToPathFront $HOME/.local/scripts
+
+bindkey -s ^f "tmux-sessionizer\n"
