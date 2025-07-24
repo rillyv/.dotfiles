@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+pushd $DOTFILES > /dev/null
+
+for folder in ${(s:,:)STOW_FOLDERS}; do
+    echo "Stowing $folder"
+    stow -D $folder  # remove existing symlinks (if any)
+    stow $folder     # create new symlinks
+done
+
+popd > /dev/null
+

@@ -1,15 +1,13 @@
 #!/usr/bin/env zsh
 
-export DOTFILES="$HOME/.dotfiles"
-export STOW_FOLDERS="zsh,tmux,nvim,alacritty,xprofile,i3,personal"
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="zsh,tmux,nvim,alacritty,xprofile,i3,personal,bin"
+fi
 
-pushd $DOTFILES
+if [[ -z $DOTFILES ]]; then
+    DOTFILES="$HOME/.dotfiles"
+fi
 
-for folder in ${(s:,:)STOW_FOLDERS}; do
-  echo "Stowing $folder"
-  stow -D $folder
-  stow $folder
-done
-
-popd
+# Run the install script
+STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
 

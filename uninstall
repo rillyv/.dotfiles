@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+pushd $DOTFILES > /dev/null
+
+for folder in ${(s:,:)STOW_FOLDERS}; do
+    echo "Removing $folder"
+    stow -D $folder
+done
+
+popd > /dev/null
+
