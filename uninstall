@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 pushd $DOTFILES > /dev/null
+echo $STOW_FOLDERS
 
 for folder in ${(s:,:)STOW_FOLDERS}; do
     echo "Removing $folder"
