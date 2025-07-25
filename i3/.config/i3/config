@@ -170,6 +170,6 @@ bindsym $mod+p exec flameshot gui
 exec --no-startup-id nm-applet
 exec --no-startup-id bash -c "source ~/.xprofile"
 
-exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec /snap/ghostty/current/bin/ghostty'
 exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/zen'
 exec --no-startup-id i3-msg 'workspace 4; exec flatpak run com.spotify.Client'
