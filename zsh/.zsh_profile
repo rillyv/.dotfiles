@@ -3,6 +3,7 @@ export GIT_EDITOR=nvim
 
 PERSONAL=$XDG_CONFIG_HOME/personal
 source $PERSONAL/env
+source $PERSONAL/alias
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"

@@ -10,11 +10,3 @@ addToPathFront() {
     fi
 }
 
-commitDotFiles() {
-    pushd $DOTFILES
-    pushd personal
-    git add .
-    git commit -m "personal update"
-    git push origin main
-    popd
-}

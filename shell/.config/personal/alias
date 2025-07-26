@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+alias vim="nvim"
+alias python="python3"
+alias dotf="cd ~/.dotfiles"
+alias personal="cd ~/personal"
+alias work="cd ~/work"
