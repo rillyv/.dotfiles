@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 addToPath() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$PATH:$1
@@ -10,3 +12,19 @@ addToPathFront() {
     fi
 }
 
+updateDotfilesSubmodules() {
+    pushd $DOTFILES
+    pushd personal
+    git add .
+    git commit -m "updated repositories"
+    git push origin main
+    popd
+    pushd work
+    git add .
+    git commit -m "updated repositories"
+    git push origin main
+    popd
+    git add .
+    git commit -m "updated personal/work"
+    git push origin main
+}
