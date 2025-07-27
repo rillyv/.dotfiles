@@ -8,6 +8,6 @@ echo $MOUSE_ID
 if [ -n "$MOUSE_ID" ]; then
     xinput set-prop "$MOUSE_ID" "libinput Accel Profile Enabled" 0, 1
     xinput set-prop "$MOUSE_ID" "libinput Natural Scrolling Enabled" 1
-    xinput set-prop "$MOUSE_ID" "libinput Accel Speed" -0.6
+    xinput set-prop "$MOUSE_ID" "libinput Accel Speed" -0.8
 fi
 

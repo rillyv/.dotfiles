@@ -5,8 +5,10 @@ PERSONAL=$XDG_CONFIG_HOME/personal
 source $PERSONAL/env
 source $PERSONAL/alias
 
+export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/usr/local/go/bin"
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 export DOTFILES=~/.dotfiles
