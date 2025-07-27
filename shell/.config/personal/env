@@ -24,7 +24,7 @@ updateDotfilesSubmodules() {
     git commit -m "updated repositories"
     git push origin main
     popd
-    git add .
+    git add personal work
     git commit -m "updated personal/work"
     git push origin main
 }
