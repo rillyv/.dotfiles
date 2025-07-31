@@ -65,6 +65,12 @@ input "1133:16505:Logitech_G_Pro" {
     pointer_accel -0.6
 }
 
+input "1452:832:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
+    accel_profile adaptive
+    dwt enabled
+    pointer_accel 0.3
+    scroll_factor 0.15
+}
 
 ### Key bindings
 #
@@ -239,3 +245,9 @@ bar {
 include /etc/sway/config.d/*
 
 xwayland enable
+input * {
+    xkb_layout us,us
+    xkb_variant ,colemak
+    xkb_options grp:win_space_toggle
+}
+
