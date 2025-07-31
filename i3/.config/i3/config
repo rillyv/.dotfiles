@@ -168,24 +168,20 @@ bar {
 bindsym $mod+p exec --no-startup-id flameshot gui
 
 exec --no-startup-id nm-applet
-exec --no-startup-id picom --vsync
+exec --no-startup-id picom
 exec --no-startup-id xset s off -dpms s noblank
 
 assign [class="ghostty"] → 1
-assign [class="zen"] → 2
+assign [class="firefox"] → 2
 assign [class="Spotify"] → 4
-assign [class="Gimp"] → 5
-assign [class="1Password"] → 7
+assign [class="Gimp"] → 6
 
 for_window [class="ghostty"] fullscreen enable
-for_window [class="zen"] fullscreen enable
+for_window [class="firefox"] fullscreen enable
 for_window [class="Spotify"] fullscreen enable
 for_window [class="Gimp"] fullscreen enable
-for_window [class="1Password"] fullscreen enable
 
 exec --no-startup-id /usr/bin/ghostty
-exec --no-startup-id /usr/bin/zen-browser
+exec --no-startup-id /usr/bin/firefox
 exec --no-startup-id /usr/bin/spotify
 exec --no-startup-id /usr/bin/gimp
-exec --no-startup-id /usr/bin/1password
-

@@ -12,7 +12,7 @@ export PATH="$PATH:/usr/local/go/bin"
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 export DOTFILES=~/.dotfiles
-export STOW_FOLDERS="zsh,tmux,nvim,ghostty,alacritty,xprofile,i3,personal,work,bin,shell"
+export STOW_FOLDERS="zsh,tmux,nvim,ghostty,alacritty,xprofile,i3,personal,work,bin,shell,sway"
 
 addToPathFront $HOME/.local/scripts
 
