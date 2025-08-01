@@ -8,7 +8,7 @@ startup_mode = "Maximized"
 
 [font]
 size = 16.0
-normal.family = "SF Mono"
+normal.family = "SFMono Nerd Font Mono"
 
 [colors.primary]
 background = "#191724"

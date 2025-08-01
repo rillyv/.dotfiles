@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+font pango: SFMono Nerd Font Mono 12
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -68,8 +70,8 @@ input "1133:16505:Logitech_G_Pro" {
 input "1452:832:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
     accel_profile adaptive
     dwt enabled
-    pointer_accel 0.18
-    scroll_factor 0.15
+    pointer_accel 0.21
+    scroll_factor 0.25
 }
 
 ### Key bindings
@@ -208,40 +210,42 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 #
 # Utilities:
 #
 
-    bindsym $mod+m exec wpctl set-mute \@DEFAULT_AUDIO_SINK@ toggle
-    bindsym $mod+u exec wpctl set-volume \@DEFAULT_AUDIO_SINK@ 5%-
-    bindsym $mod+y exec wpctl set-volume \@DEFAULT_AUDIO_SINK@ 5%+
+### --- Volume Control ---
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+### --- Microphone Mute ---
+bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+### --- Media Controls ---
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
-    bindsym $mod+P exec ~/.config/sway/scripts/screenshot-clipboard
-    bindsym $mod+Shift+P exec ~/.config/sway/scripts/screenshot-edit
+### --- Screen Brightness ---
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+### --- Keyboard Backlight Brightness ---
+bindsym XF86KbdBrightnessUp exec brightnessctl --device='smc::kbd_backlight' set +1
+bindsym XF86KbdBrightnessDown exec brightnessctl --device='smc::kbd_backlight' set 1%-
+
+
+bindsym $mod+P exec ~/.config/sway/scripts/screenshot-clipboard
+bindsym $mod+Shift+P exec ~/.config/sway/scripts/screenshot-edit
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-    status_command i3blocks
-    font pango:JetBrainsMono Nerd Font 11
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
@@ -255,4 +259,6 @@ input "1452:832:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
 }
 
 output eDP-1 scale 1.5
+
+for_window [class=".*"] border none
 
