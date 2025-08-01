@@ -1,0 +1,11 @@
+#!/bin/bash
+
+lid_path="/proc/acpi/button/lid/LID0/state"
+lid_state=$(cat "$lid_path" | grep -o "open\|closed")
+
+if [ "$lid_state" = "closed" ]; then
+    swaymsg output eDP-1 disable
+else
+    swaymsg output eDP-1 enable
+fi
+

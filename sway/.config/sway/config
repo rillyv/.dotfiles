@@ -239,6 +239,7 @@ bindsym XF86KbdBrightnessDown exec brightnessctl --device='smc::kbd_backlight' s
 
 bindsym $mod+P exec ~/.config/sway/scripts/screenshot-clipboard
 bindsym $mod+Shift+P exec ~/.config/sway/scripts/screenshot-edit
+bindsym $mod+Shift+F exec ~/.config/sway/scripts/lid-handler
 
 #
 # Status Bar:
