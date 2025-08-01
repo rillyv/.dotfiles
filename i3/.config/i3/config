@@ -172,16 +172,16 @@ exec --no-startup-id picom
 exec --no-startup-id xset s off -dpms s noblank
 
 assign [class="ghostty"] → 1
-assign [class="firefox"] → 2
+assign [class="zen-browser"] → 2
 assign [class="Spotify"] → 4
 assign [class="Gimp"] → 6
 
 for_window [class="ghostty"] fullscreen enable
-for_window [class="firefox"] fullscreen enable
+for_window [class="zen-browser"] fullscreen enable
 for_window [class="Spotify"] fullscreen enable
 for_window [class="Gimp"] fullscreen enable
 
 exec --no-startup-id /usr/bin/ghostty
-exec --no-startup-id /usr/bin/firefox
+exec --no-startup-id /usr/bin/zen-browser
 exec --no-startup-id /usr/bin/spotify
 exec --no-startup-id /usr/bin/gimp
