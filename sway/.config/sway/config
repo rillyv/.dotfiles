@@ -262,3 +262,13 @@ output eDP-1 scale 1.5
 
 for_window [class=".*"] border none
 
+assign [app_id="Alacritty"] 1
+assign [app_id="zen"] 2
+assign [class="Spotify"] 4
+assign [app_id="gimp"] 6
+
+exec --no-startup-id alacritty
+exec --no-startup-id zen-browser
+exec --no-startup-id spotify
+exec --no-startup-id gimp
+
