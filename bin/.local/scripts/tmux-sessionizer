@@ -13,13 +13,25 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
+create_session_with_windows() {
+    tmux new-session -ds "$selected_name" -c "$selected" -n vim
+    tmux send-keys -t "$selected_name:vim" 'vim .' C-m
+
+    tmux new-window -t "$selected_name:" -n shell -c "$selected"
+
+    tmux new-window -t "$selected_name:" -n docker -c "$selected"
+    tmux send-keys -t "$selected_name:docker" 'docker ps' C-m
+}
+
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    create_session_with_windows
+    tmux attach-session -t "$selected_name"
     exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    create_session_with_windows
 fi
 
-tmux switch-client -t $selected_name
+tmux switch-client -t "$selected_name"
+
