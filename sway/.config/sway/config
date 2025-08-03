@@ -267,6 +267,7 @@ for_window [class=".*"] border none
 assign [app_id="Alacritty"] 1
 assign [app_id="zen"] 2
 assign [class="Spotify"] 4
+assign [class="Slack"] 5
 assign [app_id="gimp"] 6
 assign [class="1Password"] 7
 assign [app_id="DBeaver"] 10
@@ -274,6 +275,7 @@ assign [app_id="DBeaver"] 10
 exec --no-startup-id alacritty
 exec --no-startup-id zen-browser
 exec --no-startup-id spotify
+exec --no-startup-id slack
 exec --no-startup-id gimp
 exec --no-startup-id 1password
 exec --no-startup-id dbeaver

@@ -6,3 +6,4 @@ alias dotf="cd ~/.dotfiles"
 alias personal="cd ~/personal"
 alias work="cd ~/work"
 alias laravel='~/.config/composer/vendor/bin/laravel'
+alias td='todo.sh'
