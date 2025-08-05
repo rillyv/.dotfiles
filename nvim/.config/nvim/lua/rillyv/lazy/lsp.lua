@@ -16,8 +16,10 @@ return {
 
 	config = function()
 		require("conform").setup({
-			formatters_by_ft = {},
-		})
+			formatters_by_ft = {
+                python = {"black", "isort"}
+            },
+        })
 
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = "*.sql",

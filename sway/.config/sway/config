@@ -68,6 +68,12 @@ input "1133:16505:Logitech_G_Pro" {
     scroll_factor 1.25
 }
 
+input "1133:45108:Logitech_MX_Master_3S" {
+    accel_profile flat
+    natural_scroll enabled
+    pointer_accel -0.1
+    scroll_factor 1.25
+}
 input "1452:832:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
     accel_profile adaptive
     dwt enabled
