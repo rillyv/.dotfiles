@@ -21,6 +21,9 @@
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
+        "custom/pomodoro",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -119,5 +122,12 @@
 	},
 	"tray": {
 		"icon-size": 20
-	}
+	},
+    "custom/pomodoro": {
+    	"format": "{}",
+    	"return-type": "json",
+    	"exec": "/home/rillyv/.local/bin/waybar-module-pomodoro",
+    	"on-click": "/home/rillyv/.local/bin/waybar-module-pomodoro toggle",
+    	"on-click-right": "/home/rillyv/.local/bin/waybar-module-pomodoro reset"
+    }
 }

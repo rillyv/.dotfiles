@@ -47,6 +47,7 @@ return {
 				"eslint",
 				"pyright",
 				"intelephense",
+				"phpactor",
 				"marksman",
 				"jsonls",
 				"html",
@@ -107,6 +108,11 @@ return {
 				end,
 				["pyright"] = function()
 					require("lspconfig").pyright.setup({
+						capabilities = capabilities,
+					})
+				end,
+				["intelephense"] = function()
+					require("lspconfig").intelephense.setup({
 						capabilities = capabilities,
 					})
 				end,
