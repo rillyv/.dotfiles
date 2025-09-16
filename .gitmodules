@@ -1,9 +1,6 @@
 [submodule "personal"]
 	path = personal
 	url = git@github.com:rillyv/.dotfiles-personal.git
-[submodule "work"]
-	path = work
-	url = git@github.com:rillyv/.dotfiles-work.git
-[submodule "nvim"]
+[submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:rillyv/nvim.git
