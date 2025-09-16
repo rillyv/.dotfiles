@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+addToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+updateDotfilesSubmodules() {
+    pushd $DOTFILES
+    pushd personal
+    git add .
+    git commit -m "updated repositories"
+    git push origin main
+    popd
+    pushd work
+    git add .
+    git commit -m "updated repositories"
+    git push origin main
+    popd
+    git add personal work
+    git commit -m "updated personal/work"
+    git push origin main
+}
+
+pullDotfilesSubmodules() {
+  for d in "${SUBS[@]}"; do
+    repo="$DOTFILES/$d"
+    [ -d "$repo/.git" ] || { echo "skip: $repo not a git repo"; continue; }
+
+    git -C "$repo" fetch --prune
+
+    # prefer main, fallback to master
+    tgt=main
+    _trackable "$repo" main || tgt=master
+
+    if _trackable "$repo" "$tgt"; then
+      if _branch_exists "$repo" "$tgt"; then
+        git -C "$repo" switch "$tgt"
+      else
+        git -C "$repo" switch -c "$tgt" --track "origin/$tgt"
+      fi
+      git -C "$repo" pull --ff-only
+    else
+      echo "warn: origin/$tgt not found for $d (leaving as-is)"
+    fi
+  done
+
+  # update superproject pointer after pulls
+  git -C "$DOTFILES" add "${SUBS[@]}" || true
+  if ! git -C "$DOTFILES" diff --cached --quiet; then
+    git -C "$DOTFILES" commit -m "chore(submodules): bump personal/work"
+    git -C "$DOTFILES" push origin HEAD
+  else
+    echo "no superproject pointer changes"
+  fi
+}

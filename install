@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+pushd $DOTFILES > /dev/null
+
+for folder in ${(s:,:)STOW_FOLDERS}; do
+    echo "Stowing $folder"
+    if [[ "$folder" == "etc" || "$folder" == "usr" ]]; then
+        sudo stow -Rvt / "$folder"
+    else
+        stow -Rvt "$HOME" "$folder"
+    fi
+done
+
+popd > /dev/null
+

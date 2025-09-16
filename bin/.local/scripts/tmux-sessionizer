@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find -L ~/.dotfiles ~/personal ~/playground ~/work -maxdepth 1 -type d | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+tmux_running=$(pgrep tmux)
+
+create_session_with_windows() {
+    tmux new-session -ds "$selected_name" -c "$selected" -n vim
+    tmux send-keys -t "$selected_name:vim" 'vim .' C-m
+
+    tmux new-window -t "$selected_name:" -n shell -c "$selected"
+
+    tmux select-window -t "$selected_name:vim"
+}
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    create_session_with_windows
+    tmux attach-session -t "$selected_name"
+    exit 0
+fi
+
+if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    create_session_with_windows
+fi
+
+tmux switch-client -t "$selected_name"
+tmux select-window -t "$selected_name:vim"
+

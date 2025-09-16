@@ -1,0 +1,22 @@
+export XDG_CONFIG_HOME=~/.config
+export GIT_EDITOR=nvim
+
+PERSONAL=$XDG_CONFIG_HOME/personal
+source $PERSONAL/env
+source $PERSONAL/alias
+
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/usr/local/go/bin"
+export VISUAL=nvim
+export EDITOR=nvim
+
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+export DOTFILES=~/.dotfiles
+export STOW_FOLDERS="zsh,tmux,nvim,alacritty,i3,personal,work,bin,shell,qmk,autorandr,etc,usr"
+
+
+addToPathFront $HOME/.local/scripts
+
+bindkey -s ^f "tmux-sessionizer\n"

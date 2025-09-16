@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+alias vim="nvim"
+alias python="python3"
+alias dotf="cd ~/.dotfiles"
+alias personal="cd ~/personal"
+alias work="cd ~/work"
+alias laravel='~/.config/composer/vendor/bin/laravel'
+alias td='todo.sh'
+alias hub="ssh rillyv@192.168.1.29"
