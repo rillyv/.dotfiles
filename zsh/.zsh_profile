@@ -14,8 +14,7 @@ export EDITOR=nvim
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 export DOTFILES=~/.dotfiles
-export STOW_FOLDERS="zsh,tmux,nvim,alacritty,i3,personal,work,bin,shell,qmk,autorandr,etc,usr"
-
+export STOW_FOLDERS="zsh,tmux,nvim,alacritty,i3,personal,work,bin,shell,qmk,autorandr,etc"
 
 addToPathFront $HOME/.local/scripts
 
