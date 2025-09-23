@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-qmk clean
-qmk compile -kb zsa/moonlander -km rillyv_zsa_moonlander
-qmk flash -kb zsa/moonlander -km rillyv_zsa_moonlander
