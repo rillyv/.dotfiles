@@ -6,8 +6,10 @@ pushd $DOTFILES > /dev/null
 for folder in ${(s:,:)STOW_FOLDERS}; do
     echo "Removing $folder"
     if [[ "$folder" == "rsi-antidote" ]]; then
-        unlink "$HOME/qmk_firmware/keyboards/zsa/moonlander/keymaps/rillyv_zsa_moonlander"
-        sudo unlink "/usr/share/xkeyboard-config-2/symbols/rillyv-colemak"
+        unlink "$HOME/.dotfiles/rsi-antidote/qmk/rillyv_zsa_moonlander" \
+        "$HOME/qmk_firmware/keyboards/zsa/moonlander/keymaps/rillyv_zsa_moonlander"
+        sudo unlink "$HOME/.dotfiles/rsi-antidote/xkb/rillyv-colemak" \
+        "/usr/share/xkeyboard-config-2/symbols/rillyv-colemak"
     elif [[ "$folder" == "etc" ]]; then
         sudo stow -Dvt / "$folder"
     else

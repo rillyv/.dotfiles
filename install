@@ -6,9 +6,9 @@ pushd $DOTFILES > /dev/null
 for folder in ${(s:,:)STOW_FOLDERS}; do
     echo "Stowing $folder"
     if [[ "$folder" == "rsi-antidote" ]]; then
-        ln -sf "$PWD/$folder/qmk/rillyv_zsa_moonlander" \
+        ln -sfn "$HOME/.dotfiles/rsi-antidote/qmk/rillyv_zsa_moonlander" \
         "$HOME/qmk_firmware/keyboards/zsa/moonlander/keymaps/rillyv_zsa_moonlander"
-        sudo ln -sf "$PWD/$folder/xkb/rillyv-colemak" \
+        sudo ln -sf "$HOME/.dotfiles/rsi-antidote/xkb/rillyv-colemak" \
         "/usr/share/xkeyboard-config-2/symbols/rillyv-colemak"
     elif [[ "$folder" == "etc" ]]; then
         sudo stow -Rvt / "$folder"
