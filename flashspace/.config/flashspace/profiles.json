@@ -16,7 +16,7 @@
           "id" : "121CF2DC-9F28-41C5-9309-E391F90E9A1A",
           "name" : "Coding",
           "openAppsOnActivation" : true,
-          "shortcut" : "opt+1",
+          "shortcut" : "cmd+1",
           "symbolIconName" : "apple.terminal"
         },
         {
@@ -31,7 +31,7 @@
           "id" : "03E6F6EA-59AB-4B9C-8D53-9239694FB89B",
           "name" : "Browsing",
           "openAppsOnActivation" : true,
-          "shortcut" : "opt+2",
+          "shortcut" : "cmd+2",
           "symbolIconName" : "network"
         },
         {
@@ -46,7 +46,7 @@
           "id" : "1BB97ECB-7F1B-46F1-9C6D-4DF47A45B2BC",
           "name" : "Spotify",
           "openAppsOnActivation" : true,
-          "shortcut" : "opt+4",
+          "shortcut" : "cmd+4",
           "symbolIconName" : "headphones"
         },
         {
@@ -61,7 +61,7 @@
           "id" : "08C07624-C012-4D0C-A418-B0F2CDBCD7B7",
           "name" : "1Password",
           "openAppsOnActivation" : true,
-          "shortcut" : "opt+7",
+          "shortcut" : "cmd+7",
           "symbolIconName" : "lock.shield.fill"
         },
         {
@@ -76,7 +76,7 @@
           "id" : "A9582CD3-D328-4D48-ABB2-173D1829141B",
           "name" : "Ableton",
           "openAppsOnActivation" : true,
-          "shortcut" : "opt+9",
+          "shortcut" : "cmd+9",
           "symbolIconName" : "pianokeys.inverse"
         },
         {
@@ -91,7 +91,7 @@
           "id" : "F771E797-DF39-4345-A329-46B00AB5375B",
           "name" : "DB",
           "openAppsOnActivation" : true,
-          "shortcut" : "opt+0",
+          "shortcut" : "cmd+0",
           "symbolIconName" : "externaldrive.fill"
         }
       ]
