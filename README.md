@@ -7,4 +7,4 @@ Collection of my configurations for:
 - Neovim & plugins
 - QMK keyboard firmware (Moonlander)
 - tmux
-
+- Flashspace (Window manager)
