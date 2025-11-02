@@ -13,8 +13,6 @@ export EDITOR=nvim
 
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 export DOTFILES=~/.dotfiles
-export STOW_FOLDERS="alacritty,bin,flashspace,nvim,personal,shell,tmux,work,zsh"
-
 
 addToPathFront $HOME/.local/scripts
 

@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!usr/bin/env zsh
 
 # Default folders if nothing passed
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="alacritty,bin,flashspace,nvim,personal,shell,tmux,work,zsh"
+    STOW_FOLDERS="alacritty,bin,flashspace,keyboard-layout,nvim,personal,shell,tmux,work,zsh"
 fi
 
 if [[ -z $DOTFILES ]]; then
