@@ -7,6 +7,3 @@
 [submodule "work"]
 	path = work
 	url = git@github.com:rillyv/.dotfiles-work.git
-[submodule "rsi-antidote"]
-	path = rsi-antidote
-	url = git@github.com:rillyv/rsi-antidote.git
