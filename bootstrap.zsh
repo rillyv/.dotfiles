@@ -2,7 +2,7 @@
 
 # Default folders if nothing passed
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="zsh,tmux,nvim,alacritty,i3,personal,work,bin,shell,autorandr,etc"
+    STOW_FOLDERS="alacritty,bin,flashspace,nvim,personal,shell,tmux,work,zsh"
 fi
 
 if [[ -z $DOTFILES ]]; then

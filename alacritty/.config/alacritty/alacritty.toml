@@ -3,12 +3,12 @@
 [window]
 padding.x = 10
 padding.y = 10
-decorations = "full"
+decorations = "None"
 startup_mode = "Maximized"
 
 [font]
-size = 16
-normal.family = "SFMono Nerd Font Mono"
+size = 18
+normal.family = "JetBrainsMono Nerd Font"
 
 [colors.primary]
 background = "#191724"
