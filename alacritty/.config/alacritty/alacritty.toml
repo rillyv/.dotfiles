@@ -23,3 +23,12 @@ style.blinking = "On"
 history = 5000
 multiplier = 3
 
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001bb"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001bf"

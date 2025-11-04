@@ -17,3 +17,4 @@ export DOTFILES=~/.dotfiles
 addToPathFront $HOME/.local/scripts
 
 bindkey -s ^f "tmux-sessionizer\n"
+
