@@ -8,3 +8,4 @@ Collection of my configurations for:
 - QMK keyboard firmware (Moonlander)
 - tmux
 - Flashspace (Window manager)
+.
