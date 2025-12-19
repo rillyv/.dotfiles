@@ -8,8 +8,12 @@ source $PERSONAL/alias
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.4/sbin:$PATH"
 export VISUAL=nvim
 export EDITOR=nvim
+export NODE_OPTIONS="--max-old-space-size=16384"
 
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 export DOTFILES=~/.dotfiles
@@ -18,3 +22,4 @@ addToPathFront $HOME/.local/scripts
 
 bindkey -s ^f "tmux-sessionizer\n"
 
+path=('./bin-dev' $path)

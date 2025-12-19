@@ -2,6 +2,8 @@
 set -euo pipefail
 
 pushd $DOTFILES > /dev/null
+STOW_FOLDERS="aerospace,alacritty,bin,keyboard-layout,nvim,personal,shell,tmux,work,zsh"
+
 
 for folder in ${(s:,:)STOW_FOLDERS}; do
     echo "Removing $folder"
